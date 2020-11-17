@@ -35,7 +35,7 @@ public class LoginPageSteps extends LibGlobal {
 	
 	@Given("User is on Adactin site")
 	public void user_is_on_Adactin_site() throws MalformedURLException {
-cloud();
+browserLaunch();
 	   urlLaunch("http://adactinhotelapp.com/");
 	}
 
