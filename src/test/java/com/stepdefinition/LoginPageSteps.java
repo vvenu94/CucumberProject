@@ -1,10 +1,16 @@
 package com.stepdefinition;
 
+import java.net.MalformedURLException;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import com.libraries.LibGlobal;
@@ -24,10 +30,12 @@ public class LoginPageSteps extends LibGlobal {
 	SelectHotel selectHotel;
 	BookHotel bookHotel;
 	CofirmHotel confirmHotel;
-		
+	WebDriver driver;
+
+	
 	@Given("User is on Adactin site")
-	public void user_is_on_Adactin_site() {
-	   browserLaunch();
+	public void user_is_on_Adactin_site() throws MalformedURLException {
+cloud();
 	   urlLaunch("http://adactinhotelapp.com/");
 	}
 
@@ -51,19 +59,23 @@ public class LoginPageSteps extends LibGlobal {
 		selectHotel.selectHotelPage();
 	  
 	}
-
-	@When("User in book hotel page enter {string},{string},{string},{string},{string}, {string},{string}and{string}")
-	public void user_in_book_hotel_page_enter_and(String firstName, String lastName, String address, String ccNum,
-			String ccType, String ccExpMonth, String ccExpYear, String ccCvv) {
+	@When("User in book hotel page enter {string},{string} and {string}")
+	public void user_in_book_hotel_page_enter_and(String firstName, String lastName, String address, io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String, String>> asMaps = dataTable.asMaps();
+		Map<String, String> map = asMaps.get(0);
+		
 		bookHotel=new BookHotel();
-		bookHotel.bookHotelPage(firstName, lastName, address, ccNum, ccType, ccExpMonth, ccExpYear, ccCvv);
+		bookHotel.bookHotelPage(firstName, lastName, address, map.get("ccNo"), map.get("ccType"), map.get("expiryMonth"), map.get("expiryYear"), map.get("cvvNo"));
 	}
+
+	
+	
 
 	@Then("User should verify url navigated to booking confirmation page and ordernumber generated")
 	public void user_should_verify_url_navigated_to_booking_confirmation_page_and_ordernumber_generated() {
 		confirmHotel =new CofirmHotel();
 		
 	 System.out.println(confirmHotel.orderNo());
-	 quit();
+	 
 	}
 }

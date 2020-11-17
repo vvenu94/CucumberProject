@@ -3,6 +3,7 @@ package com.libraries;
 import java.awt.Robot;
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -17,6 +18,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class LibGlobal {
@@ -30,8 +33,22 @@ public class LibGlobal {
 	static int i, j;
 	static List<WebElement> tRows;
 
+	public static final String USERNAME = "venuv2";
+	public static final String AUTOMATE_KEY = "pyhxpqsdbbx2dFr3SmgQ";
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+//cloud
+	public void cloud() throws MalformedURLException {
+		DesiredCapabilities caps = new DesiredCapabilities();
+        
+		caps.setCapability("os", "Windows");
+		caps.setCapability("os_version", "10");
+		caps.setCapability("browser", "Chrome");
+		caps.setCapability("browser_version", "78");
+		caps.setCapability("name", "Adactin hotel automation");
+		 driver = new RemoteWebDriver(new java.net.URL(URL), caps);
 	
 
+	}
 	// to launch the browser
 	public WebDriver browserLaunch() {
 		System.setProperty("webdriver.chrome.driver",
