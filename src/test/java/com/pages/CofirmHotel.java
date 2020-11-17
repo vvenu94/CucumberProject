@@ -18,7 +18,9 @@ public class CofirmHotel extends LibGlobal {
 		return orderNo;
 	}
 public String orderNo() {
+	jsScrollDown(getOrderNo());
 	String orderNo = getAttribute(getOrderNo());
+	
 	return orderNo;
 }
 }

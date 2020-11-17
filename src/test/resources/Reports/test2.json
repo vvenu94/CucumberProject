@@ -1,0 +1,200 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 18,
+        "name": "Validating adactin booking module",
+        "description": "",
+        "id": "verifying-adactin-details;validating-adactin-booking-module;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10417091701,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on Adactin site",
+            "match": {
+              "location": "LoginPageSteps.user_is_on_Adactin_site()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6913523801,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User should enter \"vvenu1994\" and \"DRVU6C\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vvenu1994\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"DRVU6C\"",
+                  "offset": 34
+                }
+              ],
+              "location": "LoginPageSteps.user_should_enter_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1902679499,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User in search hotel page enter \"Sydney\",\"Hotel Sunshine\",\"Standard\",\"1 - One\",\"16/10/2020\",\"17/10/2020\",\"4 - Four\"and \"0 - None\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sydney\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"Hotel Sunshine\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"Standard\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"1 - One\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"16/10/2020\"",
+                  "offset": 79
+                },
+                {
+                  "val": "\"17/10/2020\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"4 - Four\"",
+                  "offset": 105
+                },
+                {
+                  "val": "\"0 - None\"",
+                  "offset": 119
+                }
+              ],
+              "location": "LoginPageSteps.user_in_search_hotel_page_enter_and(String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1507589999,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User in select hotel page select hotel",
+            "match": {
+              "location": "LoginPageSteps.user_in_select_hotel_page_select_hotel()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1086188200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User in book hotel page enter \"venu\",\"s\" and \"fdghs\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"venu\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"s\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"fdghs\"",
+                  "offset": 45
+                }
+              ],
+              "location": "LoginPageSteps.user_in_book_hotel_page_enter_and(String,String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "ccNo",
+                  "ccType",
+                  "expiryMonth",
+                  "expiryYear",
+                  "cvvNo"
+                ]
+              },
+              {
+                "cells": [
+                  "0123456789987456",
+                  "American Express",
+                  "January",
+                  "2022",
+                  "123"
+                ]
+              },
+              {
+                "cells": [
+                  "0123456789987456",
+                  "VISA",
+                  "March",
+                  "2021",
+                  "372"
+                ]
+              },
+              {
+                "cells": [
+                  "0123456789987456",
+                  "Other",
+                  "January",
+                  "2022",
+                  "123"
+                ]
+              },
+              {
+                "cells": [
+                  "0123456789987456",
+                  "Master Card",
+                  "March",
+                  "2021",
+                  "372"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6703351400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User should verify url navigated to booking confirmation page and ordernumber generated",
+            "match": {
+              "location": "LoginPageSteps.user_should_verify_url_navigated_to_booking_confirmation_page_and_ordernumber_generated()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verifying Adactin details",
+    "description": "",
+    "id": "verifying-adactin-details",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/Loginpage.feature",
+    "tags": []
+  }
+]

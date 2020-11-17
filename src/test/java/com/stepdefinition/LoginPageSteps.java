@@ -1,5 +1,6 @@
 package com.stepdefinition;
 
+import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import com.libraries.LibGlobal;
@@ -27,10 +30,12 @@ public class LoginPageSteps extends LibGlobal {
 	SelectHotel selectHotel;
 	BookHotel bookHotel;
 	CofirmHotel confirmHotel;
-		
+	WebDriver driver;
+
+	
 	@Given("User is on Adactin site")
-	public void user_is_on_Adactin_site() {
-	   browserLaunch();
+	public void user_is_on_Adactin_site() throws MalformedURLException {
+cloud();
 	   urlLaunch("http://adactinhotelapp.com/");
 	}
 
@@ -71,6 +76,6 @@ public class LoginPageSteps extends LibGlobal {
 		confirmHotel =new CofirmHotel();
 		
 	 System.out.println(confirmHotel.orderNo());
-	 quit();
+	 
 	}
 }

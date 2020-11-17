@@ -1,5 +1,6 @@
+@fullmodule
 Feature: Verifying Adactin details
-
+@E2E @reg
   Scenario Outline: Validating adactin booking module
     Given User is on Adactin site
     When User should enter "<userName>" and "<password>"

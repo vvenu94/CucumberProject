@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="151.974565">
+<testcase classname="Verifying Adactin details" name="Validating adactin booking module" time="151.974565">
+<system-out><![CDATA[Given User is on Adactin site...............................................passed
+When User should enter "vvenu1994" and "DRVU6C".............................passed
+And User in search hotel page enter "Sydney","Hotel Sunshine","Standard","1 - One","16/10/2020","17/10/2020","4 - Four"and "0 - None".passed
+And User in select hotel page select hotel..................................passed
+And User in book hotel page enter "venu","s" and "fdghs"....................passed
+Then User should verify url navigated to booking confirmation page and ordernumber generated.passed
+]]></system-out>
+</testcase>
+</testsuite>
