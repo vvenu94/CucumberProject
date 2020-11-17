@@ -18,7 +18,7 @@ Feature: Verifying Adactin details
     Examples: 
       | userName  | password | location | hotel          | roomType     | noOfRooms | checkInDate | checkOutDate | adulPerRoom | childrenPerRoom | firstName | lastName | address |
       | vvenu1994 | DRVU6C   | Paris    | Hotel Creek    | Standard     | 4 - Four  | 16/10/2020  | 16/10/2020   | 4 - Four    | 0 - None        | last      | h        | paris   |
-      #| vvenu1994 | DRVU6C   | New York | Hotel Creek    | Super Deluxe | 6 - Six   | 16/10/2020  | 16/10/2020   | 3 - Three   | 1 - One         | last      | f        | paris   |
-      #| vvenu1994 | DRVU6C   | Paris    | Hotel Sunshine | Standard     | 7 - Seven | 16/10/2020  | 16/10/2020   | 2 - Two     | 2 - Two         | last      | f        | paris   |
-      #| vvenu1994 | DRVU6C   | Paris    | Hotel Creek    | Deluxe       | 8 - Eight | 16/10/2020  | 16/10/2020   | 2 - Two     | 3 - Three       | west      | f        | paris   |
-      #| vvenu1994 | DRVU6C   | New York | Hotel Sunshine | Standard     | 9 - Nine  | 16/10/2020  | 16/10/2020   | 3 - Three   | 4 - Four        | last      | f        | paris   |
+      | vvenu1994 | DRVU6C   | New York | Hotel Creek    | Super Deluxe | 6 - Six   | 16/10/2020  | 16/10/2020   | 3 - Three   | 1 - One         | last      | f        | paris   |
+      | vvenu1994 | DRVU6C   | Paris    | Hotel Sunshine | Standard     | 7 - Seven | 16/10/2020  | 16/10/2020   | 2 - Two     | 2 - Two         | last      | f        | paris   |
+      | vvenu1994 | DRVU6C   | Paris    | Hotel Creek    | Deluxe       | 8 - Eight | 16/10/2020  | 16/10/2020   | 2 - Two     | 3 - Three       | west      | f        | paris   |
+      | vvenu1994 | DRVU6C   | New York | Hotel Sunshine | Standard     | 9 - Nine  | 16/10/2020  | 16/10/2020   | 3 - Three   | 4 - Four        | last      | f        | paris   |
